@@ -1,5 +1,5 @@
 
-package mobileappws.Dtos;
+package mobileappws.dtos;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;

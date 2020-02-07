@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import mobileappws.Dtos.UserRestDTO;
+import mobileappws.dtos.UserRestDTO;
 import mobileappws.model.UserRest;
 
 
@@ -56,15 +56,13 @@ public class UserController {
         return new ResponseEntity<UserRest>(returnValue, HttpStatus.OK);
     }
 
-    @PutMapping
-    public String putMethodName() {
-        // TODO: process PUT request
-
-        return "update user was called";
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public UserRestDTO putMethodName() {
+        return null;
     }
 
-    @DeleteMapping
-    public String deleteUser() {
-        return "delete user was called";
+    @DeleteMapping(path = "/{userId}")
+    public ResponseEntity<Integer> deleteUser(@PathVariable String userId) {
+        return null;
     }
 }
